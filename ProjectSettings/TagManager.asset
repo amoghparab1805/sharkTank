@@ -3,12 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Wall
-  - Enemy
-  - Easy_Enemy
-  - Powerup
-  - obstacle
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -46,18 +41,3 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-<<<<<<< HEAD
-=======
-  - name: bg
-    uniqueID: 3581709733
-    locked: 0
-  - name: enemy
-    uniqueID: 168201959
-    locked: 0
-  - name: ball
-    uniqueID: 3895024039
-    locked: 0
-  - name: light
-    uniqueID: 348905461
-    locked: 0
->>>>>>> f9c16fe (Moving enemy level)
