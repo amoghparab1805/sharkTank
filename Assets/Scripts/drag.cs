@@ -1,7 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity;
+using Unity.Services.Analytics;
+using Unity.Services.Core;
 using UnityEngine.SceneManagement;
+using Unity.Services.Core.Environments;
+
 
 public class drag : MonoBehaviour
 {
@@ -22,11 +27,24 @@ public class drag : MonoBehaviour
     public GameObject circle;
     int count = 4;
 
-    private void Start(){
+
+
+
+    private async void Start(){
         cam = Camera.main;
         tl = GetComponent<TrajectoryLine>();
         circle.transform.localScale = new Vector3(0, 0, 0);
+        try
+        {   
+            await UnityServices.InitializeAsync();
+            List<string> consentIdentifiers = await Events.CheckForRequiredConsents();
+        }
+        catch (ConsentCheckException e)
+        {
+          // Something went wrong when checking the GeoIP, check the e.Reason and handle appropriately
+        }
     }
+    
     private void Update(){
         lastvelocity = rb.velocity;
 
@@ -76,6 +94,17 @@ public class drag : MonoBehaviour
         if (c.gameObject.tag == "Wall")
         {
             // rb.constraints = RigidbodyConstraints2D.FreezeAll;
+            Dictionary<string, object> parameters = new Dictionary<string, object>()
+            {
+                { "level_name", 1 },
+                { "enemy_count", 4 - count },   
+            };
+// The ‘myEvent’ event will get queued up and sent every minute
+            Events.CustomData("level_ended", parameters); 
+
+// Optional - You can call Events.Flush() to send the event immediately
+            Events.Flush();
+
             Application.LoadLevel(1);
         }
         if(c.gameObject.tag == "Powerup"){
@@ -112,6 +141,16 @@ public class drag : MonoBehaviour
             count --;
             Debug.Log("count = " + count);
             if(count == 0){
+                Dictionary<string, object> parameters = new Dictionary<string, object>()
+                {
+                    { "level_name", 1 },
+                    { "enemy_count", 4 - count },   
+                };
+                // The ‘myEvent’ event will get queued up and sent every minute
+                Events.CustomData("level_ended", parameters); 
+
+                // Optional - You can call Events.Flush() to send the event immediately
+                Events.Flush();
                 nextLevel();
                 // rb.constraints = RigidbodyConstraints2D.FreezeAll;
                 // circle.transform.localScale = new Vector3(0, 0, 0);
@@ -126,6 +165,16 @@ public class drag : MonoBehaviour
             count --;
             Debug.Log("count = " + count);
             if(count == 0){
+                Dictionary<string, object> parameters = new Dictionary<string, object>()
+                {
+                    { "level_name", 1 },
+                    { "enemy_count", 4 - count },   
+                };
+                // The ‘myEvent’ event will get queued up and sent every minute
+                Events.CustomData("level_ended", parameters); 
+
+                // Optional - You can call Events.Flush() to send the event immediately
+                Events.Flush();
                 nextLevel();
                 // rb.constraints = RigidbodyConstraints2D.FreezeAll;
                 // circle.transform.localScale = new Vector3(0, 0, 0);
