@@ -3,29 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  - Block
-  - Wall
-  - Teleporter
-=======
->>>>>>> 244db410a1b4ef16d07b2e52dd877f5d28775b6f
-  - Wall
-  - Enemy
-  - Easy_Enemy
-  - Powerup
-  - obstacle
-<<<<<<< HEAD
-=======
->>>>>>> parent of 1a3115a (Home -> Level 1)
->>>>>>> 244db410a1b4ef16d07b2e52dd877f5d28775b6f
+  tags: []
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - BlockLayer
+  - 
   - Water
   - UI
   - 
@@ -58,18 +41,3 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-<<<<<<< HEAD
-=======
-  - name: bg
-    uniqueID: 3581709733
-    locked: 0
-  - name: enemy
-    uniqueID: 168201959
-    locked: 0
-  - name: ball
-    uniqueID: 3895024039
-    locked: 0
-  - name: light
-    uniqueID: 348905461
-    locked: 0
->>>>>>> f9c16fe (Moving enemy level)

@@ -5,16 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-<<<<<<< HEAD
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-=======
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/MainMenu.unity
+    guid: daec3d4bdef4540c682c6023a1f663fe
+  - enabled: 1
+    path: Assets/Scenes/LevelMovingEnemis.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-<<<<<<< HEAD
-=======
->>>>>>> parent of 1a3115a (Home -> Level 1)
->>>>>>> 244db410a1b4ef16d07b2e52dd877f5d28775b6f
+  - enabled: 1
+    path: Assets/Scenes/LevelTeleport.unity
+    guid: de4192c9bde4345bf81a49a801cb6de5
   m_configObjects: {}
