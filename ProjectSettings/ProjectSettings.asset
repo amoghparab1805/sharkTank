@@ -3,8 +3,17 @@
 --- !u!129 &1
 PlayerSettings:
   m_ObjectHideFlags: 0
+<<<<<<< HEAD
   serializedVersion: 23
   productGUID: d8b322e90e9a94045aaa5a0ffb7c3b80
+=======
+  serializedVersion: 22
+<<<<<<< HEAD
+  productGUID: e3efb3ea08b394f619a628655689e148
+=======
+  productGUID: dea4689dc1fe2496eb5876a9f568afb5
+>>>>>>> f9c16fe (Moving enemy level)
+>>>>>>> parent of 1a3115a (Home -> Level 1)
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -12,8 +21,13 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
+<<<<<<< HEAD
   companyName: DefaultCompany
   productName: My project
+=======
+  companyName: sharkTank
+  productName: Demo1
+>>>>>>> parent of 1a3115a (Home -> Level 1)
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -47,7 +61,11 @@ PlayerSettings:
   defaultScreenWidthWeb: 960
   defaultScreenHeightWeb: 600
   m_StereoRenderingPath: 0
+<<<<<<< HEAD
   m_ActiveColorSpace: 0
+=======
+  m_ActiveColorSpace: 1
+>>>>>>> f9c16fe (Moving enemy level)
   m_MTRendering: 1
   mipStripping: 0
   numberOfMipsStripped: 0
@@ -152,13 +170,21 @@ PlayerSettings:
   resolutionScalingMode: 0
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
+<<<<<<< HEAD
   applicationIdentifier:
     Standalone: com.DefaultCompany.2DProject
+=======
+  applicationIdentifier: {}
+>>>>>>> parent of 1a3115a (Home -> Level 1)
   buildNumber:
     Standalone: 0
     iPhone: 0
     tvOS: 0
+<<<<<<< HEAD
   overrideDefaultApplicationIdentifier: 1
+=======
+  overrideDefaultApplicationIdentifier: 0
+>>>>>>> parent of 1a3115a (Home -> Level 1)
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 22
   AndroidTargetSdkVersion: 0
@@ -234,7 +260,11 @@ PlayerSettings:
   appleEnableProMotion: 0
   shaderPrecisionModel: 0
   clonedFromGUID: 10ad67313f4034357812315f3c407484
+<<<<<<< HEAD
   templatePackageId: com.unity.template.2d@6.1.0
+=======
+  templatePackageId: com.unity.template.2d@5.0.0
+>>>>>>> parent of 1a3115a (Home -> Level 1)
   templateDefaultScene: Assets/Scenes/SampleScene.unity
   useCustomMainManifest: 0
   useCustomLauncherManifest: 0
@@ -301,10 +331,23 @@ PlayerSettings:
   m_BuildTargetGraphicsAPIs:
   - m_BuildTarget: AndroidPlayer
     m_APIs: 150000000b000000
+<<<<<<< HEAD
     m_Automatic: 1
   - m_BuildTarget: iOSSupport
     m_APIs: 10000000
     m_Automatic: 1
+=======
+    m_Automatic: 0
+  - m_BuildTarget: iOSSupport
+    m_APIs: 10000000
+    m_Automatic: 1
+<<<<<<< HEAD
+=======
+  - m_BuildTarget: WebGLSupport
+    m_APIs: 0b000000
+    m_Automatic: 0
+>>>>>>> f9c16fe (Moving enemy level)
+>>>>>>> parent of 1a3115a (Home -> Level 1)
   m_BuildTargetVRSettings: []
   openGLRequireES31: 0
   openGLRequireES31AEP: 0
@@ -561,7 +604,11 @@ PlayerSettings:
   webGLTemplate: APPLICATION:Default
   webGLAnalyzeBuildSize: 0
   webGLUseEmbeddedResources: 0
+<<<<<<< HEAD
   webGLCompressionFormat: 0
+=======
+  webGLCompressionFormat: 1
+>>>>>>> f9c16fe (Moving enemy level)
   webGLWasmArithmeticExceptions: 0
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
