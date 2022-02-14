@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class drag : MonoBehaviour
 {
@@ -20,7 +19,7 @@ public class drag : MonoBehaviour
     Vector2 force;
     TrajectoryLine tl;
     public GameObject circle;
-    int count = 4;
+    int count = 100;
 
     private void Start(){
         cam = Camera.main;
@@ -32,7 +31,7 @@ public class drag : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R))
          {
-             Application.LoadLevel(1);
+             Application.LoadLevel(0);
          }
 
         if(Input.GetMouseButtonDown(0)){
@@ -56,11 +55,6 @@ public class drag : MonoBehaviour
         }
     }
 
-
-    public void nextLevel(){
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
-
     public void shootup(){
         GameObject b = Instantiate(bullet) as GameObject;
         b.transform.position = new Vector3(-2.48f, 0.48f, 0f);
@@ -76,7 +70,7 @@ public class drag : MonoBehaviour
         if (c.gameObject.tag == "Wall")
         {
             // rb.constraints = RigidbodyConstraints2D.FreezeAll;
-            Application.LoadLevel(1);
+            Application.LoadLevel(0);
         }
         if(c.gameObject.tag == "Powerup"){
             Destroy(c.gameObject);
@@ -85,11 +79,11 @@ public class drag : MonoBehaviour
             var speed = lastvelocity.magnitude;
             var direction = lastvelocity.normalized;
             rb.velocity = direction * Mathf.Max(speed, 0f);
-            // count --;
-            // if(count == 0){
-            //     // rb.constraints = RigidbodyConstraints2D.FreezeAll;
-            //     // circle.transform.localScale = new Vector3(0, 0, 0);
-            // }
+            count --;
+            if(count == 0){
+                rb.constraints = RigidbodyConstraints2D.FreezeAll;
+                circle.transform.localScale = new Vector3(0, 0, 0);
+            }
 
             Vector3 pos1 = new Vector3(-2.492358f, 3.471171f, 0f);
             Vector3 pos2 = new Vector3(-2.514237f, -2.479917f, 0f);
@@ -110,11 +104,9 @@ public class drag : MonoBehaviour
             var direction = lastvelocity.normalized;
             rb.velocity = direction * Mathf.Max(speed, 0f);
             count --;
-            Debug.Log("count = " + count);
             if(count == 0){
-                nextLevel();
-                // rb.constraints = RigidbodyConstraints2D.FreezeAll;
-                // circle.transform.localScale = new Vector3(0, 0, 0);
+                rb.constraints = RigidbodyConstraints2D.FreezeAll;
+                circle.transform.localScale = new Vector3(0, 0, 0);
             }
         }
         if (c.gameObject.tag == "Enemy")
@@ -124,11 +116,9 @@ public class drag : MonoBehaviour
             rb.velocity = direction * Mathf.Max(speed, 0f);
             Destroy(c.gameObject);
             count --;
-            Debug.Log("count = " + count);
             if(count == 0){
-                nextLevel();
-                // rb.constraints = RigidbodyConstraints2D.FreezeAll;
-                // circle.transform.localScale = new Vector3(0, 0, 0);
+                rb.constraints = RigidbodyConstraints2D.FreezeAll;
+                circle.transform.localScale = new Vector3(0, 0, 0);
             }
         }
 
