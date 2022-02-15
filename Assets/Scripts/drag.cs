@@ -32,7 +32,7 @@ public class drag : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R))
          {
-             Application.LoadLevel(1);
+             Application.LoadLevel(3);
          }
 
         if(Input.GetMouseButtonDown(0)){

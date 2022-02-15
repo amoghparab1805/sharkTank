@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5906991402822643666}
   - component: {fileID: 6907839841084221718}
   - component: {fileID: -3249883714074520840}
-  - component: {fileID: -2076627750539093129}
+  - component: {fileID: 1292712093799344146}
   m_Layer: 0
   m_Name: Hexagon Flat-Top
   m_TagString: Untagged
@@ -112,7 +112,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.8828125}
   m_EdgeRadius: 0
---- !u!114 &-2076627750539093129
+--- !u!114 &1292712093799344146
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8901520430128601882}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e735fa3a2d9ac44d69e60b5a5840e27c, type: 3}
+  m_Script: {fileID: 11500000, guid: ff44f2374c4b9f24282cf86322c18354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 0}

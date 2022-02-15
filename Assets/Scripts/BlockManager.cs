@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BlockManager : MonoBehaviour
 {
@@ -15,6 +16,10 @@ public class BlockManager : MonoBehaviour
         // Debug.Log("blockArray "+ blockArray[i].]);
         blockCount = blockArray.Length;
         subscribeToEvent();
+    }
+
+    public void nextLevel(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     void subscribeToEvent() {
@@ -38,6 +43,7 @@ public class BlockManager : MonoBehaviour
                 if(hitPoints[i]<=0) {
                     blockArray = RemoveIndices(blockArray, i);
                     blockCount-=1;
+                    if(blockCount==0) nextLevel();
                     return true;
                 } 
                 break;
